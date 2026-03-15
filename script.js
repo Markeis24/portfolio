@@ -7,7 +7,7 @@ const particle=document.createElement("div")
 particle.style.position="absolute"
 particle.style.width="3px"
 particle.style.height="3px"
-particle.style.background="white"
+particle.style.background="#577ae4"
 
 particle.style.left=Math.random()*window.innerWidth+"px"
 particle.style.top="0"
@@ -80,19 +80,19 @@ const info=document.getElementById("infoMapa")
 
 if(area==="cidade"){
 
-info.innerText="Aqui ficam meus projetos e aprendizado em programação."
+info.innerText="Área dos meus projetos acadêmicos."
 
 }
 
 if(area==="ninho"){
 
-info.innerText="Representa os desafios difíceis que enfrentei aprendendo lógica."
+info.innerText="Desafios enfrentados aprendendo programação."
 
 }
 
 if(area==="jardins"){
 
-info.innerText="Lugar de crescimento na minha carreira como desenvolvedora."
+info.innerText="Crescimento na minha jornada na tecnologia."
 
 }
 
