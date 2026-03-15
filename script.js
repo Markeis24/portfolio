@@ -2,7 +2,7 @@ const particles = document.getElementById("particles")
 
 function createParticle(){
 
-const particle = document.createElement("div")
+const particle=document.createElement("div")
 
 particle.style.position="absolute"
 particle.style.width="3px"
@@ -10,9 +10,7 @@ particle.style.height="3px"
 particle.style.background="white"
 
 particle.style.left=Math.random()*window.innerWidth+"px"
-particle.style.top="0px"
-
-particle.style.opacity=Math.random()
+particle.style.top="0"
 
 particle.style.transition="transform 6s linear"
 
@@ -57,3 +55,45 @@ requestAnimationFrame(moveHornet)
 }
 
 moveHornet()
+
+
+
+function attack(){
+
+const knight=document.querySelector(".knight")
+
+knight.style.transform="scale(1.2) rotate(-10deg)"
+
+setTimeout(()=>{
+
+knight.style.transform="scale(1)"
+
+},200)
+
+}
+
+
+
+function mostrarInfo(area){
+
+const info=document.getElementById("infoMapa")
+
+if(area==="cidade"){
+
+info.innerText="Aqui ficam meus projetos e aprendizado em programação."
+
+}
+
+if(area==="ninho"){
+
+info.innerText="Representa os desafios difíceis que enfrentei aprendendo lógica."
+
+}
+
+if(area==="jardins"){
+
+info.innerText="Lugar de crescimento na minha carreira como desenvolvedora."
+
+}
+
+}
