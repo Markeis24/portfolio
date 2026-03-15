@@ -7,10 +7,13 @@ color:white;
 background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)), url("img/bg.jpg");
 background-size:cover;
 background-attachment:fixed;
+background-position:center;
 
 cursor:url("img/cursor.png"),auto;
 
 }
+
+/* HEADER */
 
 header{
 
@@ -20,12 +23,15 @@ padding:30px;
 
 }
 
+/* MENU GAME */
+
 .game-menu{
 
 display:flex;
 justify-content:center;
 gap:25px;
 padding:15px;
+
 border-top:2px solid #577ae4;
 border-bottom:2px solid #577ae4;
 
@@ -37,14 +43,20 @@ color:#577ae4;
 text-decoration:none;
 font-weight:bold;
 padding:10px;
+letter-spacing:1px;
+
+transition:0.3s;
 
 }
 
 .game-menu a:hover{
 
+color:white;
 box-shadow:0 0 10px #577ae4;
 
 }
+
+/* HERO */
 
 .hero{
 
@@ -68,6 +80,8 @@ animation:float 4s infinite ease-in-out;
 
 }
 
+/* SECTIONS */
+
 section{
 
 text-align:center;
@@ -75,12 +89,15 @@ padding:60px;
 
 }
 
+/* SKILLS */
+
 .skills-grid{
 
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:15px;
+margin-top:20px;
 
 }
 
@@ -90,8 +107,11 @@ background:#577ae4;
 padding:12px 20px;
 border-radius:25px;
 font-weight:bold;
+letter-spacing:1px;
 
 }
+
+/* PROJETOS */
 
 .cards{
 
@@ -107,8 +127,11 @@ flex-wrap:wrap;
 background:rgba(20,20,40,0.9);
 padding:25px;
 width:260px;
+
 border-radius:15px;
 border:1px solid #577ae4;
+
+transition:0.3s;
 
 }
 
@@ -118,6 +141,8 @@ transform:scale(1.05);
 box-shadow:0px 0px 20px #577ae4;
 
 }
+
+/* FORMAÇÃO */
 
 .timeline{
 
@@ -131,9 +156,12 @@ margin:auto;
 background:rgba(15,15,30,0.9);
 padding:20px;
 margin:20px;
+
 border-left:4px solid #577ae4;
 
 }
+
+/* GITHUB STATS */
 
 .github-stats{
 
@@ -144,6 +172,8 @@ flex-wrap:wrap;
 
 }
 
+/* HORNET */
+
 #hornet{
 
 position:fixed;
@@ -151,7 +181,11 @@ bottom:20px;
 left:-200px;
 width:120px;
 
+z-index:3;
+
 }
+
+/* PARTICLES */
 
 #particles{
 
@@ -161,5 +195,58 @@ left:0;
 width:100%;
 height:100%;
 pointer-events:none;
+
+z-index:1;
+
+}
+
+/* NÉVOA */
+
+.fog{
+
+position:fixed;
+top:0;
+left:-50%;
+
+width:200%;
+height:100%;
+
+background:url("https://i.imgur.com/8IuucQZ.png") repeat-x;
+
+opacity:0.15;
+
+animation:fogMove 90s linear infinite;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+.fog2{
+
+opacity:0.08;
+animation-duration:120s;
+
+}
+
+@keyframes fogMove{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(50%);
+}
+
+}
+
+/* GARANTIR QUE O CONTEÚDO FIQUE ACIMA */
+
+header, section{
+
+position:relative;
+z-index:2;
 
 }
