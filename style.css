@@ -4,7 +4,7 @@ margin:0;
 font-family:'Cinzel', serif;
 color:white;
 
-background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.9)), url("img/bg.jpg");
+background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.95)), url("img/bg.jpg");
 background-size:cover;
 background-attachment:fixed;
 background-position:center;
@@ -27,14 +27,14 @@ display:flex;
 justify-content:center;
 gap:25px;
 padding:15px;
-border-top:2px solid #3c3c6b;
-border-bottom:2px solid #3c3c6b;
+border-top:2px solid #577ae4;
+border-bottom:2px solid #577ae4;
 
 }
 
 .game-menu a{
 
-color:#9aa7ff;
+color:#577ae4;
 text-decoration:none;
 font-weight:bold;
 padding:10px;
@@ -43,7 +43,7 @@ padding:10px;
 
 .game-menu a:hover{
 
-box-shadow:0 0 10px #8f9cff;
+box-shadow:0 0 10px #577ae4;
 
 }
 
@@ -76,6 +76,25 @@ padding:60px;
 
 }
 
+.skills-grid{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+
+}
+
+.skill{
+
+background:#577ae4;
+padding:12px 20px;
+border-radius:25px;
+font-weight:bold;
+
+}
+
 .cards{
 
 display:flex;
@@ -91,14 +110,14 @@ background:rgba(20,20,40,0.9);
 padding:25px;
 width:260px;
 border-radius:15px;
-border:1px solid #3c3c6b;
+border:1px solid #577ae4;
 
 }
 
 .card:hover{
 
 transform:scale(1.05);
-box-shadow:0px 0px 20px #8f9cff;
+box-shadow:0px 0px 20px #577ae4;
 
 }
 
@@ -114,7 +133,16 @@ margin:auto;
 background:rgba(15,15,30,0.9);
 padding:20px;
 margin:20px;
-border-left:4px solid #8f9cff;
+border-left:4px solid #577ae4;
+
+}
+
+.github-stats{
+
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
 
 }
 
@@ -139,7 +167,7 @@ cursor:pointer;
 .area:hover{
 
 transform:scale(1.1);
-box-shadow:0 0 15px #8f9cff;
+box-shadow:0 0 15px #577ae4;
 
 }
 
