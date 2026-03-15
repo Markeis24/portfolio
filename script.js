@@ -71,29 +71,3 @@ knight.style.transform="scale(1)"
 },200)
 
 }
-
-
-
-function mostrarInfo(area){
-
-const info=document.getElementById("infoMapa")
-
-if(area==="cidade"){
-
-info.innerText="Área dos meus projetos acadêmicos."
-
-}
-
-if(area==="ninho"){
-
-info.innerText="Desafios enfrentados aprendendo programação."
-
-}
-
-if(area==="jardins"){
-
-info.innerText="Crescimento na minha jornada na tecnologia."
-
-}
-
-}
