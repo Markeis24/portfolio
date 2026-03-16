@@ -234,7 +234,7 @@ margin:40px 0;
 .mob-stats::before,
 .mob-stats::after{
 
-content:"";
+content:"✧";
 width:60%;
 height:1px;
 
@@ -253,7 +253,7 @@ opacity:0.7;
 .mob-run::before,
 .mob-stats::before{
 
-content:"✦";
+content:"✧";
 color:#577ae4;
 font-size:18px;
 
