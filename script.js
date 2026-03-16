@@ -34,19 +34,19 @@ setInterval(createParticle,200)
 
 
 
-const hornet=document.getElementById("hornet")
+const hornet = document.getElementById("hornet")
 
-let pos=-200
+let pos = -150
 
 function moveHornet(){
 
-pos+=2
+pos += 2
 
-hornet.style.left=pos+"px"
+hornet.style.top = pos + "px"
 
-if(pos>window.innerWidth){
+if(pos > window.innerHeight){
 
-pos=-200
+pos = -150
 
 }
 
