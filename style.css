@@ -226,3 +226,33 @@ position:relative;
 z-index:2;
 
 }
+
+.mob-run{
+
+width:100%;
+overflow:hidden;
+margin:40px 0;
+position:relative;
+
+}
+
+.mob-run img{
+
+width:120px;
+position:relative;
+
+animation:runMob 8s linear infinite;
+
+}
+
+@keyframes runMob{
+
+0%{
+left:-150px;
+}
+
+100%{
+left:110%;
+}
+
+}
