@@ -293,15 +293,34 @@ position:relative;
 
 width:100%;
 display:flex;
-justify-content:center;
+flex-direction:column;
 align-items:center;
+gap:15px;
 
 margin:40px 0;
 
 }
 
+.mob-stats::before,
+.mob-stats::after{
+
+content:"";
+width:60%;
+height:1px;
+
+background:linear-gradient(
+to right,
+transparent,
+#577ae4,
+transparent
+);
+
+opacity:0.6;
+
+}
+
 .mob-stats img{
 
-width:150px;
+width:180px;
 
 }
