@@ -256,3 +256,37 @@ left:110%;
 }
 
 }
+
+.projetos-header{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+margin-bottom:30px;
+
+}
+
+.projetos-header img{
+
+width:100px;
+
+animation:floatMob 3s ease-in-out infinite;
+
+}
+
+@keyframes floatMob{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
