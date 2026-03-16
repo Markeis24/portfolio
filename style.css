@@ -13,8 +13,6 @@ cursor:url("img/cursor.png"),auto;
 
 }
 
-/* HEADER */
-
 header{
 
 text-align:center;
@@ -22,8 +20,6 @@ background:rgba(10,10,20,0.9);
 padding:30px;
 
 }
-
-/* MENU GAME */
 
 .game-menu{
 
@@ -56,8 +52,6 @@ box-shadow:0 0 10px #577ae4;
 
 }
 
-/* HERO */
-
 .hero{
 
 text-align:center;
@@ -80,16 +74,12 @@ animation:float 4s infinite ease-in-out;
 
 }
 
-/* SECTIONS */
-
 section{
 
 text-align:center;
 padding:60px;
 
 }
-
-/* SKILLS */
 
 .skills-grid{
 
@@ -110,8 +100,6 @@ font-weight:bold;
 letter-spacing:1px;
 
 }
-
-/* PROJETOS */
 
 .cards{
 
@@ -142,8 +130,6 @@ box-shadow:0px 0px 20px #577ae4;
 
 }
 
-/* FORMAÇÃO */
-
 .timeline{
 
 max-width:700px;
@@ -161,8 +147,6 @@ border-left:4px solid #577ae4;
 
 }
 
-/* GITHUB STATS */
-
 .github-stats{
 
 display:flex;
@@ -172,20 +156,16 @@ flex-wrap:wrap;
 
 }
 
-/* HORNET */
 
 #hornet{
 
 position:fixed;
-bottom:20px;
-left:-200px;
+top:-150px;
+right:40px;
 width:120px;
-
-z-index:3;
 
 }
 
-/* PARTICLES */
 
 #particles{
 
@@ -199,8 +179,6 @@ pointer-events:none;
 z-index:1;
 
 }
-
-/* NÉVOA */
 
 .fog{
 
@@ -241,8 +219,6 @@ transform:translateX(50%);
 }
 
 }
-
-/* GARANTIR QUE O CONTEÚDO FIQUE ACIMA */
 
 header, section{
 
