@@ -289,23 +289,19 @@ position:relative;
 
 }
 
+.mob-stats{
+
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+
+margin:40px 0;
+
+}
+
 .mob-stats img{
 
 width:150px;
-position:relative;
-
-animation:runStats 10s linear infinite;
-
-}
-
-@keyframes runStats{
-
-0%{
-left:-150px;
-}
-
-100%{
-left:110%;
-}
 
 }
