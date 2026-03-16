@@ -9,7 +9,7 @@ background-size:cover;
 background-attachment:fixed;
 background-position:center;
 
-cursor:url("img/cursor.png"),auto;
+cursor: url("img/cursor.png") 16 16, auto;
 
 }
 
