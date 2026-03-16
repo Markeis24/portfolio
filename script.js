@@ -33,31 +33,6 @@ particle.remove()
 setInterval(createParticle,200)
 
 
-
-const hornet = document.getElementById("hornet")
-
-let pos = -150
-
-function moveHornet(){
-
-pos += 2
-
-hornet.style.top = pos + "px"
-
-if(pos > window.innerHeight){
-
-pos = -150
-
-}
-
-requestAnimationFrame(moveHornet)
-
-}
-
-moveHornet()
-
-
-
 function attack(){
 
 const knight=document.querySelector(".knight")
