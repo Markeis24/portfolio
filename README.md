@@ -117,7 +117,3 @@ Se quiser conversar ou dar algum feedback:
 📂 GitHub
 
 🌐 Portfólio
-
----
-
-⭐ Se você gostou do projeto, considere deixar uma estrela no repositório!
