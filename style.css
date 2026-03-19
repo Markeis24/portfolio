@@ -82,6 +82,19 @@ animation:pulseTitle 3s infinite;
 
 }
 
+#formacao h2{
+
+font-size:42px;
+letter-spacing:3px;
+
+text-shadow:
+0 0 10px #577ae4,
+0 0 25px rgba(87,122,228,0.6);
+
+margin-bottom:30px;
+
+}
+
 .knight{
 
 width:300px;
@@ -108,17 +121,106 @@ padding:30px;
 .timeline{
 
 max-width:700px;
-margin:auto;
+margin:40px auto;
+
+position:relative;
 
 }
+
+/* LINHA CENTRAL */
+
+.timeline::before{
+
+content:"";
+position:absolute;
+
+left:50%;
+top:0;
+
+width:2px;
+height:100%;
+
+background:#577ae4;
+
+transform:translateX(-50%);
+
+opacity:0.5;
+
+}
+
+/* CARDS */
 
 .timeline-item{
 
 background:rgba(15,15,30,0.9);
-padding:20px;
-margin:20px;
 
-border-left:4px solid #577ae4;
+padding:20px;
+
+margin:30px 0;
+
+width:45%;
+
+border-radius:10px;
+
+box-shadow:0 0 10px rgba(87,122,228,0.3);
+
+position:relative;
+
+transition:0.3s;
+
+}
+
+/* LADO ESQUERDO */
+
+.timeline-item:nth-child(odd){
+left:0;
+}
+
+/* LADO DIREITO */
+
+.timeline-item:nth-child(even){
+left:55%;
+}
+
+/* PONTO NA LINHA */
+
+.timeline-item::before{
+
+content:"";
+position:absolute;
+
+top:20px;
+
+width:12px;
+height:12px;
+
+background:#577ae4;
+
+border-radius:50%;
+
+box-shadow:0 0 10px #577ae4;
+
+}
+
+/* posição dos pontos */
+
+.timeline-item:nth-child(odd)::before{
+right:-8px;
+}
+
+.timeline-item:nth-child(even)::before{
+left:-8px;
+}
+
+/* HOVER */
+
+.timeline-item:hover{
+
+transform:scale(1.03);
+
+box-shadow:
+0 0 15px #577ae4,
+0 0 30px rgba(87,122,228,0.5);
 
 }
 
@@ -442,15 +544,87 @@ box-shadow:
 background:rgba(20,20,40,0.9);
 padding:25px;
 
-max-width:800px; /* AQUI É A CHAVE */
+max-width:300px;
 width:100%;
 
-margin:20px auto; /* CENTRALIZA */
-
 border-radius:15px;
-border:1px solid #577ae4;
+
+border:1px solid rgba(87,122,228,0.4);
+
+box-shadow:0 0 10px rgba(87,122,228,0.3);
 
 transition:0.3s;
+
+position:relative;
+overflow:hidden;
+
+}
+
+/* BRILHO PASSANDO */
+
+.card::before{
+
+content:"";
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.3),
+transparent
+);
+
+transition:0.6s;
+
+}
+
+.card:hover::before{
+left:100%;
+}
+
+/* HOVER */
+
+.card:hover{
+
+transform:translateY(-8px) scale(1.05);
+
+box-shadow:
+0 0 20px #577ae4,
+0 0 40px rgba(87,122,228,0.6);
+
+}
+
+.card a{
+
+display:inline-block;
+margin-top:10px;
+
+padding:8px 15px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+color:white;
+
+background:#577ae4;
+
+transition:0.3s;
+
+}
+
+.card a:hover{
+
+background:white;
+color:#000;
+
+box-shadow:0 0 10px #577ae4;
 
 }
 
