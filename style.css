@@ -1,107 +1,123 @@
-/* ===== BODY ===== */
-
 body{
 
 margin:0;
 font-family:'Cinzel', serif;
 color:white;
 
-background:
-linear-gradient(rgba(0,0,0,0.9), rgba(10,0,0,0.95)),
-url("img/bg.jpg");
-
+background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)), url("img/bg.jpg");
 background-size:cover;
 background-attachment:fixed;
 background-position:center;
 
-cursor:url("img/cursor.png"), auto;
+cursor: url("img/cursor.png") 16 16, auto;
 
 }
 
-/* ===== LAYOUT ===== */
-
-.container{
-display:flex;
-}
-
-/* ===== SIDEBAR ===== */
-
-.sidebar{
-
-width:260px;
-height:100vh;
-
-background:#0b0b12;
-border-right:1px solid #7a1f2b;
+header{
 
 text-align:center;
-padding:20px;
+background:rgba(10,10,20,0.9);
+padding:30px;
 
 }
 
-.profile{
-width:120px;
-border-radius:50%;
-border:2px solid #7a1f2b;
-}
+.game-menu{
 
-/* ===== MENU ===== */
-
-.menu{
 display:flex;
-flex-direction:column;
-gap:15px;
-margin-top:20px;
+justify-content:center;
+gap:25px;
+padding:15px;
+
+border-top:2px solid #577ae4;
+border-bottom:2px solid #577ae4;
+
 }
 
-.menu a{
+.game-menu a{
 
-color:#aaa;
+color:#577ae4;
 text-decoration:none;
+font-weight:bold;
 padding:10px;
+letter-spacing:1px;
 
 transition:0.3s;
 
 }
 
-.menu a:hover{
+.game-menu a:hover{
 
-color:#ff3b5c;
-box-shadow:0 0 10px #ff3b5c;
+color:white;
+box-shadow:0 0 10px #577ae4;
 
 }
 
-/* ===== MAIN ===== */
+.hero{
 
-.main{
-flex:1;
+text-align:center;
+padding:80px;
+
+}
+
+.knight{
+
+width:300px;
+animation:float 4s infinite ease-in-out;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+100%{transform:translateY(0)}
+
+}
+
+section{
+
+text-align:center;
 padding:30px;
-}
-
-/* ===== HEADER ===== */
-
-.header{
-
-border-bottom:1px solid #7a1f2b;
-margin-bottom:20px;
 
 }
 
-.header h1{
-color:#ff3b5c;
+.skills-grid{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+
 }
 
-/* ===== CARDS ===== */
+.skill{
+
+background:#577ae4;
+padding:12px 20px;
+border-radius:25px;
+font-weight:bold;
+letter-spacing:1px;
+
+}
+
+.cards{
+
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+
+}
 
 .card{
 
-background:#12121f;
-border:1px solid #7a1f2b;
-
+background:rgba(20,20,40,0.9);
 padding:25px;
-margin-bottom:25px;
+width:260px;
 
-border-radius:10px;
+border-radius:15px;
+border:1px solid #577ae4;
 
 transition:0.3s;
 
@@ -109,61 +125,49 @@ transition:0.3s;
 
 .card:hover{
 
-transform:scale(1.02);
-box-shadow:0 0 20px #7a1f2b;
+transform:scale(1.05);
+box-shadow:0px 0px 20px #577ae4;
 
 }
 
-/* ===== TITULOS ===== */
+.timeline{
 
-h2{
-text-align:center;
-letter-spacing:2px;
-margin-bottom:20px;
-}
-
-/* ===== GRID PROJETOS ===== */
-
-.grid{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.mini-card{
-
-width:250px;
-background:#1a1a2b;
-padding:15px;
-
-border:1px solid #7a1f2b;
-
-transition:0.3s;
+max-width:700px;
+margin:auto;
 
 }
 
-.mini-card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 15px #ff3b5c;
+.timeline-item{
+
+background:rgba(15,15,30,0.9);
+padding:20px;
+margin:20px;
+
+border-left:4px solid #577ae4;
+
 }
 
-/* ===== GITHUB ===== */
-
-.github{
+.github-stats{
 
 display:flex;
-gap:20px;
-flex-wrap:wrap;
 justify-content:center;
+gap:30px;
+flex-wrap:wrap;
 
 }
 
-.github img{
-width:350px;
-}
+#particles{
 
-/* ===== FOG ===== */
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+
+z-index:1;
+
+}
 
 .fog{
 
@@ -176,120 +180,142 @@ height:100%;
 
 background:url("https://static.vecteezy.com/system/resources/thumbnails/016/017/463/small/white-cloud-cutout-illustration-free-png.png") repeat-x;
 
-opacity:0.08;
+opacity:0.15;
 
-animation:fogMove 120s linear infinite;
+animation:fogMove 90s linear infinite;
 
 pointer-events:none;
+
+z-index:0;
+
+}
+
+.fog2{
+
+opacity:0.08;
+animation-duration:120s;
 
 }
 
 @keyframes fogMove{
 
-0%{transform:translateX(0);}
-100%{transform:translateX(50%);}
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(50%);
+}
 
 }
 
-/* ===== PARTICLES ===== */
+header, section{
 
-#particles{
+position:relative;
+z-index:2;
 
-position:fixed;
-top:0;
-left:0;
+}
+
+
+.mob-run,
+.mob-stats{
 
 width:100%;
-height:100%;
-
-pointer-events:none;
-
-}
-
-/* ===== SKILLS CENTRALIZADAS ===== */
-
-.skills,
-.soft-skills{
-
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
-
+display:flex;
+flex-direction:column;
+align-items:center;
 gap:15px;
-
-max-width:700px;
-margin:0 auto;
+margin:40px 0;
 
 }
 
-/* ===== TECH SKILLS ===== */
+.mob-run::before,
+.mob-run::after,
+.mob-stats::before,
+.mob-stats::after{
 
-.skills span{
+content:"✧";
+width:60%;
+height:1px;
+
+background:linear-gradient(
+to right,
+transparent,
+#577ae4,
+transparent
+);
+
+opacity:0.7;
+
+}
+
+
+.mob-run::before,
+.mob-stats::before{
+
+content:"✧";
+color:#577ae4;
+font-size:18px;
 
 display:flex;
 align-items:center;
 justify-content:center;
 
-height:50px;
+width:100%;
 
-border-radius:10px;
-
-font-size:14px;
-font-weight:bold;
-
-transition:0.3s;
+background:none;
 
 }
 
-.skills span:nth-child(3n){
-background:#ffffff;
-color:#000;
-}
 
-.skills span:nth-child(3n+1){
-background:#577ae4;
-color:white;
-}
+.mob-run img,
+.mob-stats img{
 
-.skills span:nth-child(3n+2){
-background:#2b2b2b;
-color:white;
-}
+width:120px;
 
-.skills span:hover{
-
-transform:translateY(-5px) scale(1.05);
-
-box-shadow:0 0 15px #577ae4;
+filter:drop-shadow(0 0 8px #577ae4);
 
 }
 
-/* ===== SOFT SKILLS ===== */
-
-.soft-skills span{
+.projetos-header{
 
 display:flex;
+flex-direction:column;
 align-items:center;
-justify-content:center;
-
-height:50px;
-
-border-radius:10px;
-
-font-size:14px;
-
-background:#1a1a2b;
-color:white;
-
-border:1px solid #577ae4;
-
-transition:0.3s;
+gap:10px;
+margin-bottom:10px;
 
 }
 
-.soft-skills span:hover{
+.projetos-header img{
 
-transform:translateY(-5px) scale(1.05);
+width:180px;
 
-box-shadow:0 0 10px #577ae4;
+animation:floatMob 3s ease-in-out infinite;
+
+}
+
+@keyframes floatMob{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.mob-stats{
+
+width:100%;
+overflow:hidden;
+margin:40px 0;
+position:relative;
 
 }
