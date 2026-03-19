@@ -383,3 +383,29 @@ transform:translateY(-5px) scale(1.05);
 box-shadow:0 0 15px #577ae4;
 
 }
+
+/* FORÇA CENTRALIZAÇÃO REAL */
+
+.skills-grid,
+.soft-skills{
+
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+
+gap:15px;
+
+max-width:700px;
+
+/* ESSAS DUAS LINHAS SÃO A CHAVE */
+margin-left:auto;
+margin-right:auto;
+
+}
+
+/* GARANTE QUE O SECTION NÃO ATRAPALHE */
+
+section{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
