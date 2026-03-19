@@ -430,3 +430,21 @@ border:1px solid #577ae4;
 transition:0.3s;
 
 }
+
+.titulo-icon{
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+
+}
+
+.icon-title{
+
+width:30px;
+height:30px;
+
+filter:drop-shadow(0 0 5px #577ae4);
+
+}
