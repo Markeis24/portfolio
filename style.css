@@ -1,123 +1,107 @@
+/* ===== BODY ===== */
+
 body{
 
 margin:0;
 font-family:'Cinzel', serif;
 color:white;
 
-background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)), url("img/bg.jpg");
+background:
+linear-gradient(rgba(0,0,0,0.9), rgba(10,0,0,0.95)),
+url("img/bg.jpg");
+
 background-size:cover;
 background-attachment:fixed;
 background-position:center;
 
-cursor: url("img/cursor.png") 16 16, auto;
+cursor:url("img/cursor.png"), auto;
 
 }
 
-header{
+/* ===== LAYOUT ===== */
+
+.container{
+display:flex;
+}
+
+/* ===== SIDEBAR ===== */
+
+.sidebar{
+
+width:260px;
+height:100vh;
+
+background:#0b0b12;
+border-right:1px solid #7a1f2b;
 
 text-align:center;
-background:rgba(10,10,20,0.9);
-padding:30px;
+padding:20px;
 
 }
 
-.game-menu{
+.profile{
+width:120px;
+border-radius:50%;
+border:2px solid #7a1f2b;
+}
 
+/* ===== MENU ===== */
+
+.menu{
 display:flex;
-justify-content:center;
-gap:25px;
-padding:15px;
-
-border-top:2px solid #577ae4;
-border-bottom:2px solid #577ae4;
-
+flex-direction:column;
+gap:15px;
+margin-top:20px;
 }
 
-.game-menu a{
+.menu a{
 
-color:#577ae4;
+color:#aaa;
 text-decoration:none;
-font-weight:bold;
 padding:10px;
-letter-spacing:1px;
 
 transition:0.3s;
 
 }
 
-.game-menu a:hover{
+.menu a:hover{
 
-color:white;
-box-shadow:0 0 10px #577ae4;
-
-}
-
-.hero{
-
-text-align:center;
-padding:80px;
+color:#ff3b5c;
+box-shadow:0 0 10px #ff3b5c;
 
 }
 
-.knight{
+/* ===== MAIN ===== */
 
-width:300px;
-animation:float 4s infinite ease-in-out;
-
-}
-
-@keyframes float{
-
-0%{transform:translateY(0)}
-50%{transform:translateY(-20px)}
-100%{transform:translateY(0)}
-
-}
-
-section{
-
-text-align:center;
+.main{
+flex:1;
 padding:30px;
+}
+
+/* ===== HEADER ===== */
+
+.header{
+
+border-bottom:1px solid #7a1f2b;
+margin-bottom:20px;
 
 }
 
-.skills-grid{
-
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-margin-top:20px;
-
+.header h1{
+color:#ff3b5c;
 }
 
-.skill{
-
-background:#577ae4;
-padding:12px 20px;
-border-radius:25px;
-font-weight:bold;
-letter-spacing:1px;
-
-}
-
-.cards{
-
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-
-}
+/* ===== CARDS ===== */
 
 .card{
 
-background:rgba(20,20,40,0.9);
-padding:25px;
-width:260px;
+background:#12121f;
+border:1px solid #7a1f2b;
 
-border-radius:15px;
-border:1px solid #577ae4;
+padding:25px;
+margin-bottom:25px;
+
+border-radius:10px;
 
 transition:0.3s;
 
@@ -125,49 +109,61 @@ transition:0.3s;
 
 .card:hover{
 
-transform:scale(1.05);
-box-shadow:0px 0px 20px #577ae4;
+transform:scale(1.02);
+box-shadow:0 0 20px #7a1f2b;
 
 }
 
-.timeline{
+/* ===== TITULOS ===== */
 
-max-width:700px;
-margin:auto;
+h2{
+text-align:center;
+letter-spacing:2px;
+margin-bottom:20px;
+}
+
+/* ===== GRID PROJETOS ===== */
+
+.grid{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.mini-card{
+
+width:250px;
+background:#1a1a2b;
+padding:15px;
+
+border:1px solid #7a1f2b;
+
+transition:0.3s;
 
 }
 
-.timeline-item{
-
-background:rgba(15,15,30,0.9);
-padding:20px;
-margin:20px;
-
-border-left:4px solid #577ae4;
-
+.mini-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 15px #ff3b5c;
 }
 
-.github-stats{
+/* ===== GITHUB ===== */
+
+.github{
 
 display:flex;
-justify-content:center;
-gap:30px;
+gap:20px;
 flex-wrap:wrap;
+justify-content:center;
 
 }
 
-#particles{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-
-z-index:1;
-
+.github img{
+width:350px;
 }
+
+/* ===== FOG ===== */
 
 .fog{
 
@@ -180,147 +176,37 @@ height:100%;
 
 background:url("https://static.vecteezy.com/system/resources/thumbnails/016/017/463/small/white-cloud-cutout-illustration-free-png.png") repeat-x;
 
-opacity:0.15;
+opacity:0.08;
 
-animation:fogMove 90s linear infinite;
+animation:fogMove 120s linear infinite;
 
 pointer-events:none;
-
-z-index:0;
-
-}
-
-.fog2{
-
-opacity:0.08;
-animation-duration:120s;
 
 }
 
 @keyframes fogMove{
 
-0%{
-transform:translateX(0);
-}
-
-100%{
-transform:translateX(50%);
-}
+0%{transform:translateX(0);}
+100%{transform:translateX(50%);}
 
 }
 
-header, section{
+/* ===== PARTICLES ===== */
 
-position:relative;
-z-index:2;
+#particles{
 
-}
-
-
-.mob-run,
-.mob-stats{
+position:fixed;
+top:0;
+left:0;
 
 width:100%;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:15px;
-margin:40px 0;
+height:100%;
+
+pointer-events:none;
 
 }
 
-.mob-run::before,
-.mob-run::after,
-.mob-stats::before,
-.mob-stats::after{
-
-content:"✧";
-width:60%;
-height:1px;
-
-background:linear-gradient(
-to right,
-transparent,
-#577ae4,
-transparent
-);
-
-opacity:0.7;
-
-}
-
-
-.mob-run::before,
-.mob-stats::before{
-
-content:"✧";
-color:#577ae4;
-font-size:18px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-width:100%;
-
-background:none;
-
-}
-
-
-.mob-run img,
-.mob-stats img{
-
-width:120px;
-
-filter:drop-shadow(0 0 8px #577ae4);
-
-}
-
-.projetos-header{
-
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:10px;
-margin-bottom:10px;
-
-}
-
-.projetos-header img{
-
-width:180px;
-
-animation:floatMob 3s ease-in-out infinite;
-
-}
-
-@keyframes floatMob{
-
-0%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-10px);
-}
-
-100%{
-transform:translateY(0px);
-}
-
-}
-
-.mob-stats{
-
-width:100%;
-overflow:hidden;
-margin:40px 0;
-position:relative;
-
-}
-
-/* ===== CONTAINER PADRÃO ===== */
+/* ===== SKILLS CENTRALIZADAS ===== */
 
 .skills,
 .soft-skills{
@@ -330,8 +216,8 @@ grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
 
 gap:15px;
 
-max-width:700px; /* largura máxima */
-margin:0 auto;   /* CENTRALIZA */
+max-width:700px;
+margin:0 auto;
 
 }
 
@@ -354,8 +240,6 @@ transition:0.3s;
 
 }
 
-/* CORES TECH */
-
 .skills span:nth-child(3n){
 background:#ffffff;
 color:#000;
@@ -370,8 +254,6 @@ color:white;
 background:#2b2b2b;
 color:white;
 }
-
-/* HOVER TECH */
 
 .skills span:hover{
 
@@ -403,8 +285,6 @@ border:1px solid #577ae4;
 transition:0.3s;
 
 }
-
-/* HOVER SOFT */
 
 .soft-skills span:hover{
 
