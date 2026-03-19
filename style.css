@@ -319,3 +319,65 @@ margin:40px 0;
 position:relative;
 
 }
+
+/* TECH SKILLS */
+
+.skills{
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+
+}
+
+.skills span{
+
+background:#7a1f2b;
+padding:8px 15px;
+border-radius:20px;
+
+border:1px solid #ff3b5c;
+
+font-size:14px;
+
+transition:0.3s;
+
+}
+
+.skills span:hover{
+
+transform:scale(1.1);
+box-shadow:0 0 10px #ff3b5c;
+
+}
+
+/* SOFT SKILLS */
+
+.soft-skills{
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+
+}
+
+.soft-skills span{
+
+background:#1a1a2b;
+padding:8px 15px;
+border-radius:20px;
+
+border:1px solid #577ae4;
+
+font-size:14px;
+
+transition:0.3s;
+
+}
+
+.soft-skills span:hover{
+
+transform:scale(1.1);
+box-shadow:0 0 10px #577ae4;
+
+}
