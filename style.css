@@ -59,6 +59,29 @@ padding:80px;
 
 }
 
+.hero h2{
+
+font-size:60px;
+
+letter-spacing:4px;
+
+text-shadow:
+0 0 10px #577ae4,
+0 0 25px #577ae4,
+0 0 40px rgba(87,122,228,0.7);
+
+animation:pulseTitle 3s infinite;
+
+}
+
+@keyframes pulseTitle{
+
+0%{text-shadow:0 0 10px #577ae4;}
+50%{text-shadow:0 0 30px #577ae4;}
+100%{text-shadow:0 0 10px #577ae4;}
+
+}
+
 .knight{
 
 width:300px;
