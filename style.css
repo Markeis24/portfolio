@@ -272,7 +272,7 @@ position:relative;
 
 }
 
-/* ===== SKILLS CENTRALIZADAS ===== */
+/* ===== SKILLS HUD FINAL ===== */
 
 .skills,
 .soft-skills{
@@ -283,12 +283,12 @@ justify-content:center;
 
 gap:15px;
 
-max-width:700px;
-margin:20px auto;
+max-width:800px;
+margin:30px auto;
 
 }
 
-/* CAIXINHAS */
+/* ===== CAIXAS ===== */
 
 .skills span,
 .soft-skills span{
@@ -300,16 +300,26 @@ justify-content:center;
 min-width:140px;
 height:50px;
 
-border-radius:10px;
+padding:0 10px;
+
+border-radius:12px;
 
 font-size:14px;
 font-weight:bold;
+
+position:relative;
+overflow:hidden;
+
+background:#0f0f1a;
+color:white;
+
+border:1px solid rgba(87,122,228,0.4);
 
 transition:0.3s;
 
 }
 
-/* CORES TECH */
+/* ===== CORES TECH (VARIAÇÃO) ===== */
 
 .skills span:nth-child(3n){
 background:#ffffff;
@@ -322,25 +332,85 @@ color:white;
 }
 
 .skills span:nth-child(3n+2){
-background:#2b2b2b;
+background:#1c1c2e;
 color:white;
 }
 
-/* SOFT */
+/* ===== GLOW BASE ===== */
 
+.skills span,
 .soft-skills span{
-background:#1a1a2b;
-color:white;
-border:1px solid #577ae4;
+box-shadow:0 0 5px rgba(87,122,228,0.3);
 }
 
-/* HOVER */
+/* ===== BRILHO PASSANDO (HUD) ===== */
+
+.skills span::before,
+.soft-skills span::before{
+
+content:"";
+position:absolute;
+
+top:0;
+left:-120%;
+
+width:120%;
+height:100%;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.5),
+transparent
+);
+
+transform:skewX(-20deg);
+
+}
+
+/* animação suave automática */
+
+.skills span,
+.soft-skills span{
+animation:hudGlow 4s linear infinite;
+}
+
+@keyframes hudGlow{
+
+0%{
+box-shadow:0 0 5px rgba(87,122,228,0.3);
+}
+
+50%{
+box-shadow:
+0 0 10px #577ae4,
+0 0 20px rgba(87,122,228,0.5);
+}
+
+100%{
+box-shadow:0 0 5px rgba(87,122,228,0.3);
+}
+
+}
+
+/* brilho passando no hover */
+
+.skills span:hover::before,
+.soft-skills span:hover::before{
+left:120%;
+transition:0.6s;
+}
+
+/* ===== HOVER FINAL ===== */
 
 .skills span:hover,
 .soft-skills span:hover{
 
-transform:translateY(-5px) scale(1.05);
-box-shadow:0 0 15px #577ae4;
+transform:translateY(-6px) scale(1.08);
+
+box-shadow:
+0 0 15px #577ae4,
+0 0 30px rgba(87,122,228,0.6);
 
 }
 
