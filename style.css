@@ -343,3 +343,20 @@ transform:translateY(-5px) scale(1.05);
 box-shadow:0 0 15px #577ae4;
 
 }
+
+.card{
+
+background:rgba(20,20,40,0.9);
+padding:25px;
+
+max-width:800px; /* AQUI É A CHAVE */
+width:100%;
+
+margin:20px auto; /* CENTRALIZA */
+
+border-radius:15px;
+border:1px solid #577ae4;
+
+transition:0.3s;
+
+}
