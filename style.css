@@ -465,8 +465,8 @@ gap:10px;
 
 .icon-title{
 
-width:30px;
-height:30px;
+width:40px;
+height:40px;
 
 filter:drop-shadow(0 0 5px #577ae4);
 
@@ -505,8 +505,8 @@ transition:0.3s;
 
 .skill-icon{
 
-width:22px;
-height:22px;
+width:30px;
+height:30px;
 
 object-fit:contain;
 
