@@ -81,54 +81,6 @@ padding:30px;
 
 }
 
-.skills-grid{
-
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-margin-top:20px;
-
-}
-
-.skill{
-
-background:#577ae4;
-padding:12px 20px;
-border-radius:25px;
-font-weight:bold;
-letter-spacing:1px;
-
-}
-
-.cards{
-
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-
-}
-
-.card{
-
-background:rgba(20,20,40,0.9);
-padding:25px;
-width:260px;
-
-border-radius:15px;
-border:1px solid #577ae4;
-
-transition:0.3s;
-
-}
-
-.card:hover{
-
-transform:scale(1.05);
-box-shadow:0px 0px 20px #577ae4;
-
-}
 
 .timeline{
 
@@ -320,21 +272,23 @@ position:relative;
 
 }
 
-/* ===== SKILLS FINAL (CAIXINHAS + HUD) ===== */
+/* ===== SKILLS CENTRALIZADAS ===== */
 
 .skills,
 .soft-skills{
 
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 
 gap:15px;
+
 max-width:700px;
 margin:20px auto;
 
 }
 
-/* ===== CAIXINHAS ===== */
+/* CAIXINHAS */
 
 .skills span,
 .soft-skills span{
@@ -343,6 +297,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 
+min-width:140px;
 height:50px;
 
 border-radius:10px;
@@ -350,14 +305,11 @@ border-radius:10px;
 font-size:14px;
 font-weight:bold;
 
-position:relative;
-overflow:hidden;
-
 transition:0.3s;
 
 }
 
-/* ===== CORES TECH ===== */
+/* CORES TECH */
 
 .skills span:nth-child(3n){
 background:#ffffff;
@@ -374,7 +326,7 @@ background:#2b2b2b;
 color:white;
 }
 
-/* ===== SOFT SKILLS ===== */
+/* SOFT */
 
 .soft-skills span{
 background:#1a1a2b;
@@ -382,45 +334,12 @@ color:white;
 border:1px solid #577ae4;
 }
 
-/* ===== BRILHO HUD ===== */
-
-.skills span::after,
-.soft-skills span::after{
-
-content:"";
-position:absolute;
-
-top:0;
-left:-100%;
-
-width:100%;
-height:100%;
-
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.4),
-transparent
-);
-
-transition:0.5s;
-
-}
-
-/* ativa no hover */
-
-.skills span:hover::after,
-.soft-skills span:hover::after{
-left:100%;
-}
-
-/* ===== HOVER ===== */
+/* HOVER */
 
 .skills span:hover,
 .soft-skills span:hover{
 
 transform:translateY(-5px) scale(1.05);
-
 box-shadow:0 0 15px #577ae4;
 
 }
