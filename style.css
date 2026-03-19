@@ -319,23 +319,25 @@ margin:40px 0;
 position:relative;
 
 }
-/* ===== SKILLS MELHORADAS (SEM QUEBRAR) ===== */
 
-.skills-grid{
+/* FUNCIONA PARA QUALQUER UMA */
+
+.skills-grid,
+.soft-skills{
 
 display:grid;
 grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
 
 gap:15px;
-
 max-width:700px;
 margin:20px auto;
 
 }
 
-/* QUADRADINHOS */
+/* CARDS */
 
-.skill{
+.skill,
+.soft-skills span{
 
 display:flex;
 align-items:center;
@@ -352,29 +354,32 @@ transition:0.3s;
 
 }
 
-/* CORES VARIADAS */
+/* CORES */
 
-.skill:nth-child(3n){
+.skill:nth-child(3n),
+.soft-skills span:nth-child(3n){
 background:#ffffff;
 color:#000;
 }
 
-.skill:nth-child(3n+1){
+.skill:nth-child(3n+1),
+.soft-skills span:nth-child(3n+1){
 background:#577ae4;
 color:white;
 }
 
-.skill:nth-child(3n+2){
+.skill:nth-child(3n+2),
+.soft-skills span:nth-child(3n+2){
 background:#2b2b2b;
 color:white;
 }
 
-/* HOVER BONITO */
+/* HOVER */
 
-.skill:hover{
+.skill:hover,
+.soft-skills span:hover{
 
 transform:translateY(-5px) scale(1.05);
-
 box-shadow:0 0 15px #577ae4;
 
 }
