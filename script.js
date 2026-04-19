@@ -33,3 +33,7 @@ function attack(){
         knight.style.transform = "";
     }, 200);
 }
+
+window.addEventListener("load", () => {
+    document.querySelector(".hero-title").style.opacity = "1";
+});
