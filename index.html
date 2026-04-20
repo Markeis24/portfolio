@@ -31,7 +31,6 @@
 </header>
 
 <section class="hero">
-
     <div class="hero-overlay"></div>
 
     <img src="img/knight.png" class="knight" onclick="attack()">
@@ -43,7 +42,6 @@
     </p>
 
     <a href="#sobre" class="hero-button">Entrar em Hallownest</a>
-
 </section>
 
 <div class="mob-run">
@@ -51,12 +49,15 @@
 </div>
 
 <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Olá! Meu nome é <b>Giovanna Marques</b>. Sou estudante de Banco de Dados na FATEC, atualmente no 3º período, com grande interesse nas áreas de tecnologia, programação e análise de dados.</p>
+    <div class="card">
+        <h2>Sobre Mim</h2>
 
-    <p>Atualmente sou estagiária de TI na empresa <b>Tudo de Bicho</b>, atuando com automação de processos internos, suporte tecnológico e melhorias operacionais.</p>
+        <p>Olá! Meu nome é <b>Giovanna Marques</b>. Sou estudante de Banco de Dados na FATEC, atualmente no 3º período.</p>
 
-    <p>Estou em constante evolução técnica, buscando aplicar meus conhecimentos em desenvolvimento, banco de dados e automações para gerar soluções eficientes.</p>
+        <p>Atualmente sou estagiária de TI na empresa <b>Tudo de Bicho</b>, atuando com automação de processos internos.</p>
+
+        <p>Estou em constante evolução técnica, buscando aplicar meus conhecimentos em desenvolvimento, banco de dados e automações.</p>
+    </div>
 </section>
 
 <section id="skills">
@@ -65,18 +66,15 @@
     <h2>Tech Skills</h2>
 
     <div class="skills">
-        <span class="skill-item">Java</span>
-        <span class="skill-item">Spring Boot</span>
-        <span class="skill-item">C</span>
-        <span class="skill-item">POO</span>
-        <span class="skill-item">SQL</span>
-        <span class="skill-item">Modelagem de Dados</span>
-        <span class="skill-item">REST API</span>
-        <span class="skill-item">Git</span>
-        <span class="skill-item">GitHub</span>
-        <span class="skill-item">HTML5</span>
-        <span class="skill-item">CSS</span>
-        <span class="skill-item">Power BI</span>
+        <span class="skill-item"><img src="img/amuletos/java.png" class="skill-icon">Java</span>
+        <span class="skill-item"><img src="img/amuletos/springboot.png" class="skill-icon">Spring Boot</span>
+        <span class="skill-item"><img src="img/amuletos/c.png" class="skill-icon">C</span>
+        <span class="skill-item"><img src="img/amuletos/sql.png" class="skill-icon">SQL</span>
+        <span class="skill-item"><img src="img/amuletos/git.png" class="skill-icon">Git</span>
+        <span class="skill-item"><img src="img/amuletos/github.png" class="skill-icon">GitHub</span>
+        <span class="skill-item"><img src="img/amuletos/html5.png" class="skill-icon">HTML5</span>
+        <span class="skill-item"><img src="img/amuletos/css.png" class="skill-icon">CSS</span>
+        <span class="skill-item"><img src="img/amuletos/powerbi.png" class="skill-icon">Power BI</span>
     </div>
 </div>
 
@@ -86,7 +84,6 @@
     <div class="soft-skills">
         <span>Responsabilidade</span>
         <span>Proatividade</span>
-        <span>Trabalho em equipe</span>
         <span>Comunicação</span>
         <span>Organização</span>
         <span>Adaptabilidade</span>
@@ -96,24 +93,19 @@
 </section>
 
 <section id="formacao">
-    <h2>Formação</h2>
+    <div class="card">
+        <h2>Formação</h2>
 
-    <div class="timeline">
-        <div class="timeline-item">
-            <h3>FATEC</h3>
-            <p>Curso de Banco de Dados (em andamento)</p>
-        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>FATEC</h3>
+                <p>Curso de Banco de Dados (em andamento)</p>
+            </div>
 
-        <div class="timeline-item">
-            <h3>Cursos e Certificações</h3>
-            <p>
-                Escola de Inovadores – 40h<br>
-                Java Básico – 40h<br>
-                SQL – 40h<br>
-                Power BI<br>
-                Modelagem de Dados<br>
-                Ciência de Dados
-            </p>
+            <div class="timeline-item">
+                <h3>Cursos</h3>
+                <p>Java • SQL • Power BI • Modelagem de Dados</p>
+            </div>
         </div>
     </div>
 </section>
@@ -124,32 +116,38 @@
     <div class="cards">
         <div class="card">
             <h3>API Acadêmica</h3>
-            <p>Projeto acadêmico utilizando Java e MySQL para desenvolvimento backend.</p>
-            <a href="https://github.com/markeis24" target="_blank">Ver projeto</a>
+            <p>Projeto backend com Java e MySQL.</p>
+            <a href="#">Ver projeto</a>
         </div>
 
         <div class="card">
             <h3>Automação de Processos</h3>
-            <p>Automação de tarefas internas e otimização de processos em estágio.</p>
-            <a href="https://github.com/markeis24" target="_blank">Ver projeto</a>
+            <p>Automação de tarefas internas no estágio.</p>
+            <a href="#">Ver projeto</a>
         </div>
     </div>
 </section>
 
+<div class="mob-stats">
+    <img src="img/mob-stats.gif" alt="mob">
+</div>
+
 <section id="github">
-    <h2>Estatísticas do GitHub</h2>
+    <div class="card">
+        <h2>GitHub</h2>
 
-    <div class="github-stats">
-        <img height="170" src="https://github-readme-stats.vercel.app/api?username=markeis24&show_icons=true&bg_color=0d1117&title_color=577ae4&icon_color=577ae4&text_color=c9d1d9&border_color=30363d">
-
-        <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=markeis24&layout=compact&bg_color=0d1117&title_color=577ae4&text_color=c9d1d9&border_color=30363d">
+        <div class="github-stats">
+            <img height="170" src="https://github-readme-stats.vercel.app/api?username=markeis24&show_icons=true&bg_color=0d1117&title_color=577ae4&icon_color=577ae4&text_color=c9d1d9&border_color=30363d">
+        </div>
     </div>
 </section>
 
 <section id="contato">
-    <h2>Contato</h2>
-    <p>GitHub: github.com/markeis24</p>
-    <p>LinkedIn: linkedin.com/in/giovanna-marques-221998397</p>
+    <div class="card">
+        <h2>Contato</h2>
+        <p>GitHub: github.com/markeis24</p>
+        <p>LinkedIn: linkedin.com/in/giovanna-marques-221998397</p>
+    </div>
 </section>
 
 <script src="script.js"></script>
