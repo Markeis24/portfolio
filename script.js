@@ -7,14 +7,19 @@ function createParticle(){
     particle.style.width = "3px";
     particle.style.height = "3px";
     particle.style.background = "#577ae4";
+    particle.style.borderRadius = "50%";
+
     particle.style.left = Math.random() * window.innerWidth + "px";
     particle.style.top = "0";
-    particle.style.transition = "transform 6s linear";
+    particle.style.opacity = Math.random();
+
+    particle.style.transition = "transform 6s linear, opacity 6s linear";
 
     particles.appendChild(particle);
 
     setTimeout(() => {
         particle.style.transform = "translateY(100vh)";
+        particle.style.opacity = "0";
     }, 10);
 
     setTimeout(() => {
@@ -22,7 +27,7 @@ function createParticle(){
     }, 6000);
 }
 
-setInterval(createParticle, 200);
+setInterval(createParticle, 180);
 
 function attack(){
     const knight = document.querySelector(".knight");
@@ -33,7 +38,3 @@ function attack(){
         knight.style.transform = "";
     }, 200);
 }
-
-window.addEventListener("load", () => {
-    document.querySelector(".hero-title").style.opacity = "1";
-});
